@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <title>我的粉丝</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div class="header_main">
+        <div class="return_button"></div>
+        <p>我的粉丝</p>
+    </div>
+    <ul>
+        <li class="follower_all">
+            <div class="followerlist_frame">
+                <div class="followerlist_main">
+                    <img class="avatar" src="wegame.png">
+                    <p class="followerid">WeGame</p>
+                    <p class="followerintro">人生若只如初见</p>
+                    <div class="follow_button">
+                        <p>+关注</p>
+                    </div>
+                    <div class="toutiao_icon1">
+                        <p>头条号</p>
+                    </div>
+                    <div class="auth_icon1">
+                        <p>企</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="follower_all">
+            <div class="followerlist_frame">
+                <div class="followerlist_main">
+                    <img class="avatar" src="peace.png">
+                    <p class="followerid">我愿世界和平</p>
+                    <p class="followerintro">人生并不像火车要通过...</p>
+                    <div class="follow_button">
+                        <p>+关注</p>
+                    </div>
+                    <div class="toutiao_icon2">
+                        <p>头条号</p>
+                    </div>
+                    <div class="auth_icon2">
+                        <p>人</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="follower_all">
+            <div class="followerlist_frame">
+                <div class="followerlist_main">
+                    <img class="avatar" src="follower_3.png">
+                    <p class="followerid">走路带风的狒狒</p>
+                    <p class="followerintro">理想是人生的太阳～</p>
+                    <div class="unfollow_button">
+                        <p>已关注</p>
+                    </div>
+                    <div class="auth_icon3">
+                        <p>咖</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="follower_all">
+            <div class="followerlist_frame">
+                <div class="followerlist_main">
+                    <img class="avatar" src="cat.png">
+                    <p class="followerid">Happy | 猫腻</p>
+                    <p class="followerintro">发光的是追梦的你自己。</p>
+                    <div class="follow_button">
+                        <p>+关注</p>
+                    </div></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
